@@ -16,7 +16,7 @@ const AutomaticScanningPost = ({ post }) => {
     const content = [
         {
             type: 'subheading',
-            text: 'Компания ООО «Градиент» успешно занимается установкой GNSS инфраструктуры.'
+            text: 'Компания ООО "НПО "Градиент" успешно занимается установкой GNSS инфраструктуры.'
         },
         {
             type: 'paragraph',

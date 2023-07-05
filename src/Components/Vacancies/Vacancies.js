@@ -15,7 +15,7 @@ function Vacancies() {
     }, []);
 
     const fetchVacancies = async () => {
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/vacancy/vacancies`);
+        const response = await fetch(`http://45.12.75.100:5000/vacancy/vacancies`);
         const vacanciesData = await response.json();
         setVacancies(vacanciesData);
     };
