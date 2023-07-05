@@ -2,14 +2,13 @@ import React from 'react';
 import { Container, Typography, Grid, Box } from '@mui/material';
 import darkTheme from '../../darkTheme';
 
-const BlogPost = ({ title, content, imageUrl, date }) => {
-    const theme = darkTheme;
+const BlogPost = ({ title, content, imageUrl }) => {
 
     const renderContent = (contentItem) => {
         switch (contentItem.type) {
             case 'paragraph':
                 return (
-                    <Typography my={2} variant="body1" component="p">
+                    <Typography my={2} variant="body1" textAlign={'left'} component="p">
                         {contentItem.text}
                     </Typography>
                 );
@@ -35,9 +34,6 @@ const BlogPost = ({ title, content, imageUrl, date }) => {
             <Box>
                 <Typography mt={2} variant="h4" component="h1" gutterBottom>
                     {title}
-                </Typography>
-                <Typography variant="subtitle1" color={theme.palette.primary.main}>
-                    Published on {date}
                 </Typography>
                 <Box my={2}>
                     <Grid container spacing={3}>
