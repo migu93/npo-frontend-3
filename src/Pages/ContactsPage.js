@@ -33,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'left',
         alignItems: 'left',
     },
+    marginY: {
+        marginTop: theme.spacing(2),
+        marginBottom: theme.spacing(2),
+    },
 }));
 
 function ContactsPage() {
