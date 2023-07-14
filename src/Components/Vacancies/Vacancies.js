@@ -1,13 +1,52 @@
-import {Card, Grid} from "@material-ui/core";
-import {Box, Button, CardActions, Container, List, ListItem, ThemeProvider, Typography} from "@mui/material";
+import {Grid} from "@material-ui/core";
+import {Box, Container , ThemeProvider, Typography} from "@mui/material";
 import darkTheme from "../darkTheme";
 import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import {useEffect, useState} from "react";
 import VacancyCard from "./VacancyCard";
 
+
+const vacancies = [];
+/* Пример вакансии
+const vacancies = [
+    {
+        title: "Front-End Developer",
+        salary: {
+            min: 50000,
+            max: 80000
+        },
+        requirements: "Experience with HTML, CSS, and JavaScript",
+        responsibilities: [
+            "Developing user-facing features",
+            "Building reusable code and libraries",
+            "Optimizing application for maximum speed and scalability",
+            "Collaborating with back-end developers and designers"
+        ],
+        description: "We are seeking a talented Front-End Developer to join our dynamic team. As a Front-End Developer, you will be responsible for implementing visual elements that users see and interact with in a web application. You will work closely with back-end developers and UI/UX designers to ensure the application is visually appealing and user-friendly."
+    },
+    {
+        title: "Back-End Developer",
+        salary: {
+            min: 60000,
+            max: 90000
+        },
+        requirements: "Experience with Node.js and database management",
+        responsibilities: [
+            "Developing server-side logic",
+            "Designing and implementing data storage solutions",
+            "Integrating with external APIs",
+            "Collaborating with front-end developers on application features"
+        ],
+        description: "We are looking for a skilled Back-End Developer to join our team. As a Back-End Developer, you will be responsible for designing and implementing server-side logic, ensuring high performance and responsiveness of our applications. You will work closely with front-end developers to integrate user-facing elements with server-side logic."
+    },
+    // Дополнительные вакансии...
+];
+ */
+
+
 function Vacancies() {
+    /* Это был запрос вакансий с back-end
     const [vacancies, setVacancies] = useState([]);
     useEffect(() => {
         console.log(process.env.REACT_APP_BACKEND_URL);
@@ -19,6 +58,7 @@ function Vacancies() {
         const vacanciesData = await response.json();
         setVacancies(vacanciesData);
     };
+     */
 
     return (
         <ThemeProvider theme={darkTheme}>
@@ -48,7 +88,7 @@ function Vacancies() {
                 </Box>
 
             </Container>
-            <Grid container spacing={3}>
+            <Grid container spacing={3} style={{marginBottom: '70px'}}>
                 {vacancies.length > 0
                     ? vacancies.map((vacancy, index) => (
                         <Grid item xs={12} key={index}>
