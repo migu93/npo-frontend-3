@@ -10,6 +10,9 @@ import AerialPhotographyPost from '../Components/MainPageConponents/Blog_automat
 import BaseStationsPost from '../Components/MainPageConponents/Blog_automatic_scanning/BaseStationsPost';
 import { RouteObject } from 'react-router-dom';
 import VacanciesPage from "../Pages/VacanciesPage";
+import AdminAuth from "../Pages/AdminAuth";
+import ProtectedRoute from "../Components/Admin/ProtectedRoute";
+import AdminPage from "../Components/Admin/AdminPage";
 
 const headerLinks = [
     { name: "Главная", path: "/" },
@@ -65,7 +68,6 @@ const routes: RouteObject[] = [
         path: '/vacancies',
         element: <VacanciesPage />,
     },
-    /* Это был путь для админ панели
     {
         path: '/admin-npo',
         element: <AdminAuth />,
@@ -78,8 +80,6 @@ const routes: RouteObject[] = [
                 <AdminPage />
             </ProtectedRoute>,
     },
-
-     */
 ];
 
 export { routes, headerLinks };

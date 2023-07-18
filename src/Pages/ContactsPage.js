@@ -7,6 +7,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import {Grid} from "@mui/material";
 import Box from "@mui/material/Box";
+import FeedbackForm from "../Components/FeedbackForm";
 
 function ContactsPage() {
     const matches = useMediaQuery('(max-width:1370px)');
@@ -52,14 +53,12 @@ function ContactsPage() {
                             <PhoneIcon/>Тел./Факс: +7 (8442) 60 55 30
                         </Typography>
                     </div>
-                    {/* Это была форма обратной связи
-                    <div className={classes.containerForm}>
+                    <div>
                         <Typography variant="subtitle1" align="left" gutterBottom>
                             Оставьте ваши данные и мы свяжемся с вами
                         </Typography>
                         <FeedbackForm />
                     </div>
-                    */}
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Box>

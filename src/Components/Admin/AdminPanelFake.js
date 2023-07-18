@@ -12,6 +12,7 @@ import axios from "axios";
 import VacancyCard from "../Vacancies/VacancyCard";
 import AddVacancyModal from "../Vacancies/AddVacancyModal";
 import Typography from "@mui/material/Typography";
+import EmailSettings from "./EmailSettings";
 
 
 function AdminPanelFake() {
@@ -193,17 +194,24 @@ function AdminPanelFake() {
                 <Typography variant="h4" mt={4} align='left' gutterBottom>
                     Админ панель
                 </Typography>
-                <Box my={5}>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        sx={{py: 2}}
-                        startIcon={<AddIcon />}
-                        onClick={() => handleDialogOpen(null)}
-                    >
-                        Добавить вакансию
-                    </Button>
-                </Box>
+
+                <Grid container spacing={2}>
+                    <Grid item xs={6}>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            style={{height: 50, alignItems: 'center'}}
+                            sx={{py: 2}}
+                            startIcon={<AddIcon />}
+                            onClick={() => handleDialogOpen(null)}>
+                            Добавить вакансию
+                        </Button>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <EmailSettings/>
+                    </Grid>
+                </Grid>
+
                 <Grid container spacing={3}>
                     {vacancies.map((vacancy, index) => (
                         <Grid item xs={12} key={index}>

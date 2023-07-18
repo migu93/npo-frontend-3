@@ -5,6 +5,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import VacancyCard from "./VacancyCard";
+import {useEffect, useState} from "react";
 
 
 const vacancies = [];
@@ -46,7 +47,6 @@ const vacancies = [
 
 
 function Vacancies() {
-    /* Это был запрос вакансий с back-end
     const [vacancies, setVacancies] = useState([]);
     useEffect(() => {
         console.log(process.env.REACT_APP_BACKEND_URL);
@@ -54,11 +54,10 @@ function Vacancies() {
     }, []);
 
     const fetchVacancies = async () => {
-        const response = await fetch(`http://45.12.75.100:5000/vacancy/vacancies`);
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/vacancy/vacancies`);
         const vacanciesData = await response.json();
         setVacancies(vacanciesData);
     };
-     */
 
     return (
         <ThemeProvider theme={darkTheme}>
