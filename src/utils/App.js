@@ -5,6 +5,7 @@ import NavMenu from '../Components/NavMenu';
 import {Navigate, Route, Routes} from 'react-router-dom';
 import Footer from '../Components/Footer';
 import { routes } from './routes';
+import ReactDOM from 'react-dom';
 import ScrollTopButton from "../Components/ScrollTopButton";
 
 function App() {
